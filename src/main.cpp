@@ -13,7 +13,7 @@
 
 int buttonPin = 4;
 
-// Variablen zum speichern der Zustände
+// Variablen zum Speichern der Zustände
 
 int buttonStatus;         // zum Zwischenspeichern des aktuellen Taster-Status
 int letztesGelesen = LOW; // zum Zwischenspeichern des letzten Taster-Status
@@ -41,7 +41,7 @@ void loop()
 
   if ((millis() - letzteAenderung) > entprellZeit)
   {
-    // Der aktuell-gelesene Wert kann nun als zuverlässig angesehen werden, da dieser länger als 50ms vorliegt.
+    // Der aktuell-gelesene Wert kann nun als zuverlässig angesehen werden, da dieser länger als 50ms (Entprellzeit) vorliegt.
 
     if (gelesen != buttonStatus)    // falls sich der Status verändert hat...
     { 
